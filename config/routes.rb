@@ -11,6 +11,7 @@ match '/help',    to: 'staticpages#help'
   match '/about',   to: 'staticpages#about'
   
   resources :users
+  resources :microposts, only: [:create, :destroy]
   
   resources :sessions, only: [:new, :create, :destroy]
 
